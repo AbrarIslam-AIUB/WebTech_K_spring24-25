@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NGO Registration Form</title>
+</head>
+<body>
+  <h1>TrustDonations</h1>
+  <hr>
+  <h2>NGO Registration Form</h2>
+  <p>Complete the information below to register your NGO in our system.</p>
+  <form action="register_ngo.php" method="post">
+    <fieldset>
+      <legend><b>Basic Information</b></legend>
+      <table cellpadding="3" width="90%">
+        <tr>
+          <td width="15%"><label for="ngo_name">NGO Name*:</label></td>
+          <td><input type="text" id="ngo_name" name="ngo_name" size="30" required oninput="this.form.ngo_hidden.value = this.value"></td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="reg_number">Registration Number*:</label></td>
+          <td><input type="text" id="reg_number" name="reg_number" size="30" required></td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="ngo_type">NGO Type*:</label></td>
+          <td>
+              <select id="ngo_type" name="ngo_type" required>
+                  <option value="">-- Select NGO Type --</option>
+                  <option value="education">Education</option>
+                  <option value="healthcare">Healthcare</option>   
+                  <option value="human_rights">Human Rights</option>
+                  <option value="disaster_relief">Disaster Relief</option>
+                  <option value="other">Other</option>
+              </select>
+          </td>
+        </tr>
+      </tr>
+      <tr>
+        <td width="15%"><label for="op_years">Operational Years*:</label></td>
+        <td><input type="number" id="op_years" name="op_years" min="1" max="50" required></td>
+      </tr>
+
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><b>Contact Details</b></legend>
+      <table cellpadding="3" width="90%">
+        <tr>
+          <td width="15%"><label for="email">Email Address*:</label></td>
+          <td><input type="email" id="email" name="email" size="30" required</td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="website">Website URL:</label></td>
+          <td><input type="url" id="website" name="website" size="30" placeholder="https://www.example.org" required</td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="phone">Phone Number*:</label></td>
+          <td><input type="tel" id="phone" name="phone" size="30" required></td>
+      </tr>
+      <tr>
+          <td width="15%"><label for="address">Physical Address*:</label></td>
+          <td><textarea id="address" name="address" rows="3" cols="31" required></textarea></td>
+      </tr>
+      </table>
+    </fieldset>
+    <br>  
+
+    <fieldset>
+      <legend><b>Operation Information</b></legend>
+      <table cellpadding="3" width="90%">
+        <tr>
+          <td width="15%"><label>Area of Operation*:</label></td>
+          <td>
+            <input type="checkbox" id="local" name="area_operation" value="local">
+            <label for="local">Local</label><br>
+            <input type="checkbox" id="regional" name="area_operation" value="regional">
+            <label for="regional">Regional</label><br>
+            <input type="checkbox" id="national" name="area_operation" value="national">
+            <label for="national">National</label><br>
+            <input type="checkbox" id="international" name="area_operation" value="international">
+            <label for="international">International</label>
+          </td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="beneficiaries">Primary Beneficiaries*:</label></td>
+          <td>
+              <select id="beneficiaries" name="beneficiaries" multiple size="4" required>
+                  <option value="children">Children</option>
+                  <option value="elderly">Elderly</option>
+                  <option value="women">Women</option>
+                  <option value="refugees">Refugees</option>
+                  <option value="disabled">People with Disabilities</option>
+                  <option value="poor">Economically Disadvantaged</option>
+                  <option value="general">General Public</option>
+                  <option value="other">Other</option>
+              </select>
+              <br><small>(Hold Ctrl/Cmd to select multiple)</small>
+          </td>
+        </tr>
+        <tr>
+          <td width="15%"><label for="org_size">Organization Size*:</label></td>
+          <td>
+            <select id="org_size" name="org_size" required>
+                <option value="">-- Select Size --</option>
+                <option value="micro">Micro (1-5 staff)</option>
+                <option value="small">Small (6-20 staff)</option>
+                <option value="medium">Medium (21-100 staff)</option>
+                <option value="large">Large (100+ staff)</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><b>Legal Status</b></legend>
+      <table cellpadding="3" width="90%">
+          <tr>
+              <td width="15%"><label>Tax Exemption Status*:</label></td>
+              <td>
+                  <input type="radio" id="exempt" name="tax_status" value="exempt" required>
+                  <label for="exempt">Tax Exempt</label><br>
+                  <input type="radio" id="pending" name="tax_status" value="pending">
+                  <label for="pending">Application Pending</label><br>
+                  <input type="radio" id="not_exempt" name="tax_status" value="not_exempt">
+                  <label for="not_exempt">Not Exempt</label>
+              </td>
+          </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><b>Verification Documents</b></legend>
+      <table cellpadding="3" width="90%">
+        <tr>
+          <td width="15%"><label for="reg_cert">Registration-Tax Certificates*:</label></td>
+          <td><input type="file" id="reg_cert" name="reg_cert" accept=".pdf,.jpg,.png" multiple required></td>
+        </tr>
+        <tr>
+          <td><label for="annual_reports">Latest Annual Reports:</label></td>
+          <td><input type="file" id="annual_reports" name="annual_reports" accept=".pdf,.docx" multiple ></td>
+        </tr>
+      </table>
+    </fieldset> 
+    <br>
+
+    <fieldset>
+      <legend><b>Security Information</b></legend>
+      <table cellpadding="3" width="90%">
+          <tr>
+              <td width="15%"><label for="password">Create Password*:</label></td>
+              <td><input type="password" id="password" name="password" minlength="8" required></td>
+          </tr>
+          <tr>
+              <td width="15%"><label for="confirm_password">Confirm Password*:</label></td>
+              <td><input type="password" id="confirm_password" name="confirm_password" minlength="8" required></td>
+          </tr>
+      </table>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend><b>Dashboard Theme</b></legend>
+    <table cellpadding="3" width="90%">
+      <tr>
+        <td width="15%"><label for="theme">Color Scheme:</label></td>
+        <td><input type="color" id="theme" name="theme"></td>
+      </tr>
+      <tr>
+        <td width="15%"><label for="logo">Organization Logo:</label></td>
+        <td><input type="file" id="logo" name="logo" accept=".jpg,.png,.gif"></td>
+      </tr>
+    </table>
+  </fieldset>
+  <br>
+
+    <table cellpadding="3" width="90%">
+        <tr>
+            <td>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="">Terms and Conditions</a> and confirm that all information provided is accurate.*</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="notifications" name="notifications">
+                <label for="notifications">I would like to receive email notifications about donation opportunities and system updates.</label>
+            </td>
+        </tr>
+        <tr>
+            <td><br>
+                <button type="submit">Submit for Verification</button> 
+                &nbsp;&nbsp;&nbsp;
+                <button type="reset">Reset Form</button>
+            </td>
+        </tr>
+    </table>
+    
+  <input type="hidden" id="ngo_hidden" name="Form Submitted By">
+  <p><small>* Required fields</small></p>
+
+
+  </form>
+</body>
+
+
+</html>
