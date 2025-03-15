@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor form</title>
+</head>
+<body>
+    <h1>Donor Information</h1>
+    <p><i>Help out the world by filling out the information below and joining our team.</i></p>
+    <hr>
+    <form action="action.php" method="post">
+
+    <fieldset>
+        <legend><b>Personal Information</b></legend>
+        <table>
+            <tr>
+                <td><label for="Dname">Name &nbsp; </label></td>
+                <td><input type="text" name="DnameName" id="DnameID" placeholder="ex. Steve Jobs" required></td>
+            </tr>
+            <tr>
+                <td><label for="Demail">Email </label></td>
+                <td><input type="text" name="Demail" id="Demail" placeholder="ex. abc@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td><label for="Ddob">Date of Birth &nbsp;</label></td>
+                <td><input type="date" name="Ddob" id="Ddob" required></td>
+            </tr>
+            <tr>
+                <td><label for="DCity">City </label></td>
+                <td>
+                    <select name="DCity" required>
+                        <option value="none" disabled selected >Select your city</option>
+                        <option value="dhaka">Dhaka</option>
+                        <option value="raj">Rajshahi</option>
+                        <option value="syl">Sylhet</option>
+                        <option value="ctg">Chittagong</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend><b>Donation Preferences</b></legend>
+        <table>
+            <tr>
+                <td><label for="Dontype">Donation type :</label></td>
+                <td><input type="radio" name="Dontype" id="Dontype1" value="SingleTime" required>Single time</td>
+                <td><input type="radio" name="Dontype" id="Dontype2" value="Recurring" required>Recurring</td>
+            </tr>
+            <tr>
+                <td><label for="Recper">Recurrence period:</label></td>
+                <td colspan="2"> <!-- This will make the recurrence period select field span across two columns -->
+                    <select name="Recper" id="Recper" required>
+                        <option value="" selected disabled >Select recurrence period</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Paymethod">Payment method:</label></td>
+                <td><input type="radio" name="Paymethod" id="Paymethod1" value="cash">Cash</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod2" value="card">Card</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod3" value="onlineTrans">Online Banking</td>
+            </tr>
+            <tr>
+                <td><label for="Dlimit">Donation limit:</label></td>
+                <td><input type="range" name="Dlimit" id="Dlimit" min="0" max="50000" required></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend><b>Security Information</b></legend>   
+        <table>
+            <tr>
+                <td><label for="Dpass">Password :</label></td>
+                <td><input type="password" name="Dpass" id="Dpass" required></td>
+            </tr>
+            <tr>
+                <td><label for="Dconpass">Confirm password :</label></td>
+                <td><input type="password" name="Dconpass" id="Dconpass" required></td>
+            </tr>
+            <tr>
+                <td><label for="IDfile">Upload NID(.jpg/.png):</label></td>
+                <td><input type="file" name="IDfile" id="IDfile" accept=".png,.jpg" required></td>
+            </tr>
+        </table> 
+    </fieldset>
+    <br>
+    <hr>
+    <label for="Anon">Would you like your donation to be anonymous?</label>
+    <input type="checkbox" name="Anon" id="Anon">Yes
+    <br>
+    <input type="checkbox" name="tos" id="tos" required>
+    <label for="tos">I agree to the <a href="Hello.php">Terms and Services</a>.</label>
+    <br>
+    <br>
+    <button type="submit">Submit form</button>
+    <button type="reset">Reset information</button>
+
+    </form>
+</body>
+</html>
