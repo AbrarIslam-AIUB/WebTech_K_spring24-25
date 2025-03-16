@@ -15,7 +15,7 @@
         <legend><b>Personal Information</b></legend>
         <table>
             <tr>
-                <td><label for="Dname">Name &nbsp; </label></td>
+                <td><label for="Dname">Name &nbsp;</label></td>
                 <td><input type="text" name="DnameName" id="DnameID" placeholder="ex. Steve Jobs" required></td>
             </tr>
             <tr>
@@ -51,7 +51,7 @@
             </tr>
             <tr>
                 <td><label for="Recper">Recurrence period:</label></td>
-                <td colspan="2"> <!-- This will make the recurrence period select field span across two columns -->
+                <td colspan="2"> 
                     <select name="Recper" id="Recper" required>
                         <option value="" selected disabled >Select recurrence period</option>
                         <option value="monthly">Monthly</option>
@@ -62,9 +62,9 @@
             </tr>
             <tr>
                 <td><label for="Paymethod">Payment method:</label></td>
-                <td><input type="radio" name="Paymethod" id="Paymethod1" value="cash">Cash</td>
-                <td><input type="radio" name="Paymethod" id="Paymethod2" value="card">Card</td>
-                <td><input type="radio" name="Paymethod" id="Paymethod3" value="onlineTrans">Online Banking</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod1" value="cash" required>Cash</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod2" value="card" required>Card</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod3" value="onlineTrans" required>Online Banking</td>
             </tr>
             <tr>
                 <td><label for="Dlimit">Donation limit:</label></td>
@@ -93,10 +93,10 @@
     <br>
     <hr>
     <label for="Anon">Would you like your donation to be anonymous?</label>
-    <input type="checkbox" name="Anon" id="Anon">Yes
+    <input type="checkbox" name="Anon" id="Anon" required>Yes
     <br>
     <input type="checkbox" name="tos" id="tos" required>
-    <label for="tos">I agree to the <a href="Hello.php">Terms and Services</a>.</label>
+    <label for="tos">I agree to the <a href="">Terms and Services</a>.</label>
     <br>
     <br>
     <button type="submit">Submit form</button>
@@ -105,3 +105,4 @@
     </form>
 </body>
 </html>
+
