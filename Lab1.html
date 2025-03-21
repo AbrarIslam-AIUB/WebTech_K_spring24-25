@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donor form</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <h1>Donor Information</h1>
@@ -63,7 +64,7 @@
             <tr>
                 <td><label for="Paymethod">Payment method:</label></td>
                 <td><input type="radio" name="Paymethod" id="Paymethod1" value="cash" required>Cash</td>
-                <td><input type="radio" name="Paymethod" id="Paymethod2" value="card" required>Card</td>
+                <td><input type="radio" name="Paymethod" id="Paymethod2" value="card">Card</td>
                 <td><input type="radio" name="Paymethod" id="Paymethod3" value="onlineTrans" required>Online Banking</td>
             </tr>
             <tr>
@@ -99,8 +100,8 @@
     <label for="tos">I agree to the <a href="">Terms and Services</a>.</label>
     <br>
     <br>
-    <button type="submit">Submit form</button>
-    <button type="reset">Reset information</button>
+    <button type="submit" id="submitBtn">Submit form</button>
+    <button type="reset" id="resetBtn">Reset information</button>
 
     </form>
 </body>
