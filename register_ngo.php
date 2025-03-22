@@ -1,5 +1,10 @@
-<?php
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    echo "Form submitted successfully.";
-}
-?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit</title>
+</head>
+<body>
+  <p>Form Submission Successful.</p>  
+</body>
+
+</html>
