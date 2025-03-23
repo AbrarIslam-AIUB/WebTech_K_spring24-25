@@ -1,5 +1,1 @@
-<?php
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    echo "Form submitted successfully.";
-}
-?>
+<h3>Form submitted successfully</h3>
