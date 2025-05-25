@@ -1,0 +1,48 @@
+body{
+    background-color:lavenderblush;
+}
+#showTable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+#showTable th, #showTable td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+#showTable th {
+    background-color: #f2f2f2;
+}
+
+#updateFS{
+    border-width: 6px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+    height: 470px;
+    width: 850px;
+    position: relative;
+    left: 370px;
+}
+#deletebtn{
+    font-size: medium;
+    position: relative;
+    left: 800px;
+}
+#updatebtn{
+    
+    margin: 20px;
+    position: relative;
+    left: 300px;
+}
+#DnameP,#DemailP,#DoBP,#DCityP,#DpassP,#DConpassP,#IDfileP,#AddInfoP,#DmnoP,#tosSpan,#DonTypeP,#recperP,#PaymethodP{
+    color: red;
+    font-size: small;
+    margin-top: 0;
+  margin-bottom: 0;
+}

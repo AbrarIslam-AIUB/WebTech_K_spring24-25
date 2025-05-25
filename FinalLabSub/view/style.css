@@ -1,0 +1,85 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+}
+h1{
+    position: sticky;
+    z-index: 2;
+    text-align: center;
+   
+    width: 310px;
+    margin: auto;
+}
+fieldset legend{
+    text-align: center;
+    font-size: 20px;
+}
+fieldset:hover{
+    transform: scale(1.07);
+    border-width: 4.2px;
+}
+fieldset{
+    transition: 0.4s ease-in-out ;
+    width: 650px;
+    
+    margin: 5px auto;
+    border-radius: 20px;
+    border: solid rgb(180,231,255);
+    border-width: 2.5px;
+    padding: 20px;
+}
+#tos:checked + label{
+    text-decoration: line-through;
+}
+#submitBtn{
+    border-radius: 10px;
+    height:35px;
+    font-size:15px;
+    margin: auto;
+    background-color:lightslategrey;
+    position: relative;
+    left: 550px;
+    margin-top: 10px;
+}
+#resetBtn{
+    border-radius: 10px;
+    height:35px;
+    font-size:15px;
+    background-color:lightslategrey;
+    position: relative;
+    left: 550px;
+    margin-top: 10px;
+}
+#submitBtn:hover{
+    background-color: green;
+}
+#resetBtn:hover{
+    background-color: firebrick;
+}
+#addInfoTA{
+    overflow: auto;
+}
+#logoDiv{
+    position: relative;
+    left: 557px;
+    top: 55px;
+    background-color: blue;
+    width: 310px;
+    height:70px;
+    border-radius: 20px;
+    z-index: 1;
+}
+#DnameP,#DemailP,#DoBP,#DCityP,#DpassP,#DConpassP,#IDfileP,#AddInfoP,#DmnoP,#tosSpan,#DonTypeP,#recperP,#PaymethodP{
+    color: red;
+    font-size: small;
+}
+.demailG{
+    color: green;
+}
+#optspan{
+    color: mediumaquamarine;
+    font-size: small;
+}
+#SuccessSpan{
+    text-align: center;
+}

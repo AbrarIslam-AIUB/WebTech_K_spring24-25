@@ -1,0 +1,42 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+}
+fieldset legend{
+    text-align: center;
+    font-size: 20px;
+}
+#submitBtn{
+    border-radius: 10px;
+    height:35px;
+    font-size:15px;
+    margin: auto;
+    background-color:lightslategrey;
+    position: relative;
+    left: 220px;
+    
+}
+#resetBtn{
+    border-radius: 10px;
+    height:35px;
+    font-size:15px;
+    background-color:lightslategrey;
+    position: relative;
+    left: 220px;
+    
+}
+fieldset:hover{
+    transform: scale(1.07);
+    border-width: 4.2px;
+}
+fieldset{
+    transition: 0.4s ease-in-out ;
+    width: 650px;
+    
+    margin: 5px auto;
+    border-radius: 20px;
+    border: solid rgb(180,231,255);
+    border-width: 2.5px;
+    padding: 20px;
+    
+}
